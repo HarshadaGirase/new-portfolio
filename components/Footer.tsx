@@ -20,7 +20,7 @@ export default function Footer() {
           <p className="font-mono text-sm text-dim">
             ~/harshada <span className="text-live">on</span> <span className="text-tungsten">main</span>
           </p>
-          <p className="mt-1 text-5xl font-semibold leading-none tracking-tight sm:text-7xl">
+          <p className="mt-1 font-display text-6xl leading-none sm:text-8xl">
             Harshada<span className="text-tungsten">.</span>
             <span className="text-mute">dev</span>
           </p>

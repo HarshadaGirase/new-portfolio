@@ -9,6 +9,7 @@ export default function Education() {
         <div key={e.college} className="border-b border-line px-5 py-5 sm:px-8">
           <RowHeader
             logo={e.logo}
+            logoStyle={e.logoStyle}
             name={e.college}
             badge={<Badge>{e.degree.includes("Master") ? "MCA" : "Degree"}</Badge>}
             subtitle={e.degree}

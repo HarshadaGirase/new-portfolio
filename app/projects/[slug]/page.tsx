@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }: Props) {
         </nav>
 
         <header className="rise mt-12 flex items-start justify-between gap-6">
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">{p.name}</h1>
+          <h1 className="font-display text-5xl leading-[1.05] sm:text-6xl">{p.name}</h1>
           <div className="flex shrink-0 items-center gap-3 pt-2">
             {p.live && (
               <a href={p.live} target="_blank" rel="noreferrer" aria-label="Open live demo">
@@ -72,7 +72,7 @@ export default async function ProjectPage({ params }: Props) {
 
         <ProjectVisual src={p.image} name={p.name} className="rise mt-10 aspect-[16/9] [animation-delay:0.2s]" />
 
-        <div className="mt-12 max-w-[68ch] space-y-6 text-lg leading-relaxed text-ink/80">
+        <div className="mt-12 max-w-[68ch] space-y-6 text-base leading-[1.8] sm:text-[17px] text-ink/80">
           {p.description.map((para) => (
             <p key={para}>{para}</p>
           ))}
@@ -96,12 +96,12 @@ export default async function ProjectPage({ params }: Props) {
           {next ? (
             <Link href={`/projects/${next.slug}`} className="text-right">
               <span className="text-sm text-dim">Next</span>
-              <span className="block text-2xl font-semibold tracking-tight hover:text-tungsten">{next.name}</span>
+              <span className="block font-display text-3xl hover:text-tungsten">{next.name}</span>
             </Link>
           ) : (
             <Link href="/#projects" className="text-right">
               <span className="text-sm text-dim">Back to</span>
-              <span className="block text-2xl font-semibold tracking-tight hover:text-tungsten">All projects</span>
+              <span className="block font-display text-3xl hover:text-tungsten">All projects</span>
             </Link>
           )}
         </div>

@@ -26,7 +26,7 @@ export const profile = {
 export type EmploymentType = "Full-time" | "Contract" | "Internship" | "Part-time";
 
 /** How a logo sits in its round badge. `crop: "left"` shows just the icon of a wide wordmark. */
-export type LogoStyle = { bg?: string; crop?: "left" };
+export type LogoStyle = { bg?: string; crop?: "left"; zoom?: number; focus?: string };
 
 export type Experience = {
   company: string;
@@ -81,7 +81,8 @@ export const education = [
   {
     college: "DPGU School of Management & Research – Dr. D. Y. Patil Unitech Society",
     short: "DPGU SMR",
-    logo: "/images/logos/dpgu.png",
+    logo: "/images/logos/dpgusmr_logo.jpeg",
+    logoStyle: { bg: "#ffffff", zoom: 3, focus: "50% 40%" },
     degree: "Master of Computer Applications",
     start: "2022",
     end: "2024",

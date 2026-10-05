@@ -7,11 +7,13 @@ export default function Img({
   src,
   alt,
   className,
+  style,
   fallback,
 }: {
   src: string;
   alt: string;
   className?: string;
+  style?: React.CSSProperties;
   fallback: React.ReactNode;
 }) {
   const ref = useRef<HTMLImageElement>(null);
@@ -30,6 +32,7 @@ export default function Img({
       ref={ref}
       src={src}
       alt={alt}
+      style={style}
       className={`${className ?? ""} ${state === "ok" ? "" : "invisible"}`}
       onLoad={() => setState("ok")}
       onError={() => setState("failed")}

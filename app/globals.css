@@ -2,8 +2,8 @@
 
 @theme inline {
   --color-ink: #ece8e1;
-  --color-dim: #9a968e;
-  --color-mute: #5f5c57;
+  --color-dim: #aaa69e;
+  --color-mute: #6b6863;
   --color-line: #222120;
   --color-panel: #0d0c0b;
   --color-chip: #121110;
@@ -11,8 +11,9 @@
   --color-tungsten-soft: #f2a93b22;
   --color-live: #4fd18b;
 
-  --font-sans: var(--font-geist);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-serif);
+  --font-pixel: var(--font-pixelify);
+  --font-mono: var(--font-jetbrains);
 }
 
 :root {
@@ -26,9 +27,10 @@ html {
 body {
   background: #000;
   color: var(--color-ink);
-  font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
 }
 

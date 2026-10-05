@@ -40,7 +40,7 @@ export default function Hero() {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
-        <p className="rise absolute inset-x-0 top-1/2 -translate-y-1/2 text-center text-xl font-medium tracking-tight text-ink/90 [animation-delay:1.1s] sm:text-3xl">
+        <p className="rise absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display text-2xl tracking-wide text-ink/90 [animation-delay:1.1s] sm:text-4xl">
           {profile.bannerQuote}
         </p>
         {/* Letterbox bars that pull open on load */}
@@ -56,7 +56,7 @@ export default function Hero() {
             alt={profile.name}
             className="size-full object-cover"
             fallback={
-              <span className="grid size-full place-items-center text-4xl font-semibold text-tungsten sm:text-6xl">
+              <span className="grid size-full place-items-center font-display text-5xl italic text-tungsten sm:text-7xl">
                 HG
               </span>
             }
@@ -65,7 +65,7 @@ export default function Hero() {
 
         <div className="mt-5 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="rise [animation-delay:1.15s]">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            <h1 className="font-display text-5xl italic leading-none sm:text-6xl">
               {profile.name}
             </h1>
             <p className="mt-3 flex flex-wrap items-center gap-x-2 text-sm text-dim sm:text-base">

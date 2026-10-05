@@ -38,8 +38,13 @@ export default function Logo({
             ? "h-full w-auto max-w-none object-cover object-left p-1.5"
             : "size-full object-cover"
         }
+        style={
+          logoStyle?.zoom
+            ? { transform: `scale(${logoStyle.zoom})`, transformOrigin: logoStyle.focus ?? "center" }
+            : undefined
+        }
         fallback={
-          <span className="grid size-full place-items-center text-base font-semibold text-tungsten">
+          <span className="grid size-full place-items-center font-pixel text-lg text-tungsten">
             {initials(name)}
           </span>
         }

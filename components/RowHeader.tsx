@@ -32,7 +32,7 @@ export default function RowHeader({
         </div>
         <div className="shrink-0 text-sm md:text-right">
           <p className="font-semibold tabular-nums">{dates}</p>
-          <p className="text-xs text-dim sm:text-sm">{place}</p>
+          <p className="text-sm text-dim">{place}</p>
         </div>
       </div>
     </div>
