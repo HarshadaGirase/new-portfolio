@@ -57,7 +57,7 @@ export const experience: Experience[] = [
   {
     company: "XII Capital",
     logo: "/images/logos/xiicapital_logo.jpeg",
-    role: "Software Engineer Intern",
+    role: "Web Development Intern",
     type: "Internship",
     start: "Nov '24",
     end: "Jul '25",
