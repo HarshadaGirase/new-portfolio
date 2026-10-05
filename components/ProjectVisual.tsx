@@ -22,7 +22,7 @@ export default function ProjectVisual({ src, name, className = "" }: { src: stri
                 />
               ))}
             </div>
-            <span className="font-pixel text-xl text-ink/80">{name}</span>
+            <span className="text-lg font-medium text-ink/80">{name}</span>
           </div>
         }
       />

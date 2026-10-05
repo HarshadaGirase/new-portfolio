@@ -17,6 +17,7 @@ export default function Hackathons() {
           header={
             <RowHeader
               logo={h.logo}
+              logoStyle={h.logoStyle}
               name={h.name}
               subtitle={h.organizer}
               dates={`${h.start} – ${h.end}`}
@@ -24,7 +25,7 @@ export default function Hackathons() {
             />
           }
         >
-          <div className="rounded-xl border border-line bg-panel p-5 sm:ml-[80px] sm:p-6">
+          <div className="rounded-xl border border-line bg-panel p-5 sm:ml-[72px] sm:p-6">
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
                 <p className="text-xs text-dim">Project built</p>

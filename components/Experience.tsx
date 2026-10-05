@@ -15,6 +15,7 @@ export default function Experience() {
             header={
               <RowHeader
                 logo={job.logo}
+                logoStyle={job.logoStyle}
                 name={job.company}
                 badge={<Badge>{job.type}</Badge>}
                 subtitle={job.role}
@@ -23,7 +24,7 @@ export default function Experience() {
               />
             }
           >
-            <ul className="space-y-2 text-sm leading-relaxed text-ink/90 sm:pl-[80px] sm:text-base">
+            <ul className="space-y-2 text-sm leading-relaxed text-ink/90 sm:pl-[72px] sm:text-base">
               {job.points.map((p) => (
                 <li key={p} className="flex gap-3">
                   <span aria-hidden className="mt-[0.6em] size-1 shrink-0 rounded-full bg-mute" />
@@ -31,7 +32,7 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-            <div className="mt-5 flex flex-wrap gap-2 sm:pl-[80px]">
+            <div className="mt-5 flex flex-wrap gap-2 sm:pl-[72px]">
               {job.stack.map((t) => (
                 <TechChip key={t} name={t} size="sm" />
               ))}

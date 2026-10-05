@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, JetBrains_Mono, Pixelify_Sans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import { profile } from "@/data/portfolio";
 import "./globals.css";
 
-const serif = Instrument_Serif({
+const sans = Geist({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--font-geist",
 });
-const pixel = Pixelify_Sans({
+const mono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-pixelify",
-});
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${pixel.variable} ${mono.variable}`}>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body className="grain min-h-screen">
         {children}
         <BackToTop />

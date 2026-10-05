@@ -71,7 +71,7 @@ export default function ActivityPanel({ stats, user }: { stats: GithubStats; use
   });
 
   return (
-    <div className="ml-4 border-l border-line px-5 py-7 sm:ml-8 sm:px-10">
+    <div className="border-b border-line px-5 py-7 sm:px-8">
       <div className="flex flex-wrap items-center justify-between gap-6">
         <a
           href={`https://github.com/${user}`}

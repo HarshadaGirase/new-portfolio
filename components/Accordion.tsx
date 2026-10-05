@@ -22,7 +22,7 @@ export default function AccordionRow({
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={id}
-        className="group flex w-full items-center gap-4 px-5 py-5 text-left transition-colors hover:bg-panel sm:px-10"
+        className="group flex w-full items-center gap-4 px-5 py-5 text-left transition-colors hover:bg-panel sm:px-8"
       >
         <div className="min-w-0 flex-1">{header}</div>
         <LuChevronDown
@@ -39,7 +39,7 @@ export default function AccordionRow({
         }`}
       >
         <div className="overflow-hidden">
-          <div className="px-5 pb-6 sm:px-10">{children}</div>
+          <div className="px-5 pb-6 sm:px-8">{children}</div>
         </div>
       </div>
     </div>

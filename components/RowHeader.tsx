@@ -1,8 +1,10 @@
+import type { LogoStyle } from "@/data/portfolio";
 import Logo from "./Logo";
 
 /** Logo · name + badge · subtitle on the left, dates + place on the right. */
 export default function RowHeader({
   logo,
+  logoStyle,
   name,
   badge,
   subtitle,
@@ -10,6 +12,7 @@ export default function RowHeader({
   place,
 }: {
   logo: string;
+  logoStyle?: LogoStyle;
   name: string;
   badge?: React.ReactNode;
   subtitle: string;
@@ -17,8 +20,8 @@ export default function RowHeader({
   place: string;
 }) {
   return (
-    <div className="flex items-center gap-4 sm:gap-6">
-      <Logo src={logo} name={name} />
+    <div className="flex items-start gap-4 sm:items-center sm:gap-5">
+      <Logo src={logo} name={name} logoStyle={logoStyle} />
       <div className="flex min-w-0 flex-1 flex-col gap-1 md:flex-row md:items-center md:justify-between md:gap-6">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">

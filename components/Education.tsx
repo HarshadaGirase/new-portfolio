@@ -6,7 +6,7 @@ export default function Education() {
   return (
     <Section id="education" title="Education">
       {education.map((e) => (
-        <div key={e.college} className="border-b border-line px-5 py-5 sm:px-10">
+        <div key={e.college} className="border-b border-line px-5 py-5 sm:px-8">
           <RowHeader
             logo={e.logo}
             name={e.college}

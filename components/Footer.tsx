@@ -14,13 +14,13 @@ export default function Footer() {
       : []),
   ];
   return (
-    <footer className="px-5 pt-14 pb-24 sm:px-10">
+    <footer className="px-5 pt-14 pb-24 sm:px-8">
       <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="text-sm text-dim">
+          <p className="font-mono text-sm text-dim">
             ~/harshada <span className="text-live">on</span> <span className="text-tungsten">main</span>
           </p>
-          <p className="mt-1 font-display text-6xl leading-none tracking-tight sm:text-8xl">
+          <p className="mt-1 text-5xl font-semibold leading-none tracking-tight sm:text-7xl">
             Harshada<span className="text-tungsten">.</span>
             <span className="text-mute">dev</span>
           </p>
@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3 md:items-end">
           <span className="inline-flex w-fit items-center gap-2 rounded-md border border-live/30 bg-live/10 px-3 py-1.5 text-sm text-live">
             <span className="size-1.5 rounded-full bg-live" />
-            open_to_build
+            Open to build
           </span>
           <p className="text-dim md:text-right">
             {profile.title}
@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-10 flex flex-col gap-6 text-sm text-dim md:flex-row md:items-center md:justify-between">
-        <p>// © {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
         <p>Built with Next.js and Tailwind</p>
       </div>
 

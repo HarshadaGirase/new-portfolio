@@ -25,9 +25,13 @@ export const profile = {
 
 export type EmploymentType = "Full-time" | "Contract" | "Internship" | "Part-time";
 
+/** How a logo sits in its round badge. `crop: "left"` shows just the icon of a wide wordmark. */
+export type LogoStyle = { bg?: string; crop?: "left" };
+
 export type Experience = {
   company: string;
   logo: string;
+  logoStyle?: LogoStyle;
   role: string;
   type: EmploymentType;
   start: string;
@@ -40,7 +44,8 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "Sky Elemental Ltd.",
-    logo: "/images/logos/sky-elemental.png",
+    logo: "/images/logos/logo.svg",
+    logoStyle: { bg: "#ffffff", crop: "left" },
     role: "Software Engineer",
     type: "Contract",
     start: "Jul '25",
@@ -51,7 +56,7 @@ export const experience: Experience[] = [
   },
   {
     company: "XII Capital",
-    logo: "/images/logos/xii-capital.png",
+    logo: "/images/logos/xiicapital_logo.jpeg",
     role: "Software Engineer Intern",
     type: "Internship",
     start: "Nov '24",
@@ -199,6 +204,7 @@ export type Hackathon = {
   name: string;
   organizer: string;
   logo: string;
+  logoStyle?: LogoStyle;
   start: string;
   end: string;
   mode: string;
@@ -217,7 +223,7 @@ export const hackathons: Hackathon[] = [
   {
     name: "AssemblyAI Voice Agent Hackathon",
     organizer: "lablab.ai × AssemblyAI",
-    logo: "/images/hackathons/assemblyai.png",
+    logo: "/images/logos/assemblyai_logo.jpeg",
     start: "1 Sep 2026",
     end: "30 Sep 2026",
     mode: "Online",

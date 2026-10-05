@@ -11,9 +11,8 @@
   --color-tungsten-soft: #f2a93b22;
   --color-live: #4fd18b;
 
-  --font-display: var(--font-serif);
-  --font-pixel: var(--font-pixelify);
-  --font-mono: var(--font-jetbrains);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 }
 
 :root {
@@ -27,7 +26,9 @@ html {
 body {
   background: #000;
   color: var(--color-ink);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
