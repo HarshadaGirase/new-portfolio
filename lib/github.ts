@@ -3,8 +3,6 @@ export type Day = { date: string; count: number; level: 0 | 1 | 2 | 3 | 4 };
 export type GithubStats = {
   total: number;
   days: Day[];
-  repos: number | null;
-  followers: number | null;
   prs: { total: number; orgs: { owner: string; count: number }[] } | null;
 };
 
@@ -18,24 +16,27 @@ function headers(): HeadersInit {
   };
 }
 
-async function getJSON<T>(url: string, init?: RequestInit): Promise<T | null> {
-  try {
-    const res = await fetch(url, { ...init, next: { revalidate: REVALIDATE } });
-    if (!res.ok) return null;
-    return (await res.json()) as T;
-  } catch {
-    return null;
+// The contributions API can be slow; time out and retry once before giving up.
+async function getJSON<T>(url: string, init?: RequestInit, attempts = 2): Promise<T | null> {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const res = await fetch(url, {
+        ...init,
+        signal: AbortSignal.timeout(12_000),
+        next: { revalidate: REVALIDATE },
+      });
+      if (res.ok) return (await res.json()) as T;
+    } catch {
+      // timed out or network error: try again
+    }
   }
+  return null;
 }
 
 export async function getGithubStats(user: string): Promise<GithubStats> {
-  const [contrib, profile, prs] = await Promise.all([
+  const [contrib, prs] = await Promise.all([
     getJSON<{ total: { lastYear: number }; contributions: Day[] }>(
       `https://github-contributions-api.jogruber.de/v4/${user}?y=last`,
-    ),
-    getJSON<{ public_repos: number; followers: number }>(
-      `https://api.github.com/users/${user}`,
-      { headers: headers() },
     ),
     getJSON<{ total_count: number; items: { repository_url: string }[] }>(
       `https://api.github.com/search/issues?q=author:${user}+type:pr+-user:${user}&per_page=100`,
@@ -62,8 +63,6 @@ export async function getGithubStats(user: string): Promise<GithubStats> {
   return {
     total: contrib?.total.lastYear ?? 0,
     days: contrib?.contributions ?? [],
-    // repos: profile?.public_repos ?? null,
-    // followers: profile?.followers ?? null,
     prs: prSummary,
   };
 }

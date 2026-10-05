@@ -33,7 +33,7 @@ export default function Footer() {
           <p className="text-dim md:text-right">
             {profile.title}
             <br />
-            Full-stack and voice AI
+            {/* Full-stack and voice AI */}
           </p>
         </div>
       </div>

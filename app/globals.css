@@ -12,7 +12,7 @@
   --color-live: #4fd18b;
 
   --font-display: var(--font-serif);
-  --font-pixel: var(--font-pixelify);
+  --font-pixel: var(--font-geist-pixel-square);
   --font-mono: var(--font-jetbrains);
 }
 

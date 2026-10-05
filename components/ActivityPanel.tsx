@@ -84,8 +84,14 @@ export default function ActivityPanel({ stats, user }: { stats: GithubStats; use
           </span>
           <span className="text-base sm:text-lg">
             <span className="font-semibold">GitHub</span>{" "}
-            <span className="text-tungsten tabular-nums">{stats.total.toLocaleString()}</span>{" "}
-            <span className="text-dim">contributions this year</span>
+            {weeks.length > 0 ? (
+              <>
+                <span className="text-tungsten tabular-nums">{stats.total.toLocaleString()}</span>{" "}
+                <span className="text-dim">contributions this year</span>
+              </>
+            ) : (
+              <span className="text-dim">view my contributions</span>
+            )}
           </span>
         </a>
 
