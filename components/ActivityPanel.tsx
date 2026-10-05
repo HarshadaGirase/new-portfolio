@@ -135,6 +135,10 @@ export default function ActivityPanel({ stats, user }: { stats: GithubStats; use
                       <img
                         src={`https://github.com/${o.owner}.png?size=40`}
                         alt=""
+                        loading="lazy"
+                        decoding="async"
+                        width={16}
+                        height={16}
                         className="size-4 rounded-full"
                       />
                       {o.count}
@@ -166,8 +170,8 @@ export default function ActivityPanel({ stats, user }: { stats: GithubStats; use
                       </span>
                     ))}
                   </div>
+                  {/* Only mount the full year while open: ~370 cells we don't need otherwise */}
                   {open && <Grid weeks={weeks} cell={12} animate />}
-                  {!open && <Grid weeks={weeks} cell={12} />}
                   <div className="mt-3 flex items-center justify-between gap-6 text-[11px] text-dim">
                     <span>{stats.total.toLocaleString()} contributions in the last year</span>
                     <span className="flex items-center gap-1">

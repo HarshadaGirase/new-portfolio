@@ -35,6 +35,7 @@ export default function Hero() {
           <Img
             src={profile.banner}
             alt=""
+            eager
             className="absolute inset-0 size-full object-cover"
             fallback={null}
           />
@@ -54,6 +55,7 @@ export default function Hero() {
           <Img
             src={profile.photo}
             alt={profile.name}
+            eager
             className="size-full object-cover"
             fallback={
               <span className="grid size-full place-items-center font-display text-5xl italic text-tungsten sm:text-7xl">

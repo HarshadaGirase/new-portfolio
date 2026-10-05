@@ -8,12 +8,15 @@ export default function Img({
   alt,
   className,
   style,
+  eager = false,
   fallback,
 }: {
   src: string;
   alt: string;
   className?: string;
   style?: React.CSSProperties;
+  /** Load immediately (above-the-fold images); everything else loads lazily. */
+  eager?: boolean;
   fallback: React.ReactNode;
 }) {
   const ref = useRef<HTMLImageElement>(null);
@@ -33,6 +36,8 @@ export default function Img({
       src={src}
       alt={alt}
       style={style}
+      loading={eager ? "eager" : "lazy"}
+      decoding="async"
       className={`${className ?? ""} ${state === "ok" ? "" : "invisible"}`}
       onLoad={() => setState("ok")}
       onError={() => setState("failed")}
