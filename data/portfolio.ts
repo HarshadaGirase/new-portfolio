@@ -5,7 +5,7 @@
 export const profile = {
   name: "Harshada Girase",
   title: "Software Engineer",
-  tagline: ["Software Engineer", "Full-stack", "Voice AI"],
+  tagline: ["Software Engineer", "AIML"],
   photo: "/images/profile.jpg",
   banner: "/images/banner.jpg",
   bannerQuote: "Quiet code. Loud results.",
@@ -106,10 +106,10 @@ export const projects: Project[] = [
   {
     slug: "suraksha-ai",
     name: "Suraksha AI",
-    summary: "A real-time voice agent that intercepts Hinglish scam calls...",
+    summary: "A real-time voice agent that intercepts Hinglish scam calls, and when the money has already gone — turns a panicking victim's speech... ",
     // TODO: paste the full write-up for the /projects/suraksha-ai page
     description: [
-      "A real-time voice agent that intercepts Hinglish scam calls.",
+      "A real-time voice agent that intercepts Hinglish scam calls, and when the money has already gone — turns a panicking victim's speech into an action.",
     ],
     // TODO: paste the feature list
     features: [],
