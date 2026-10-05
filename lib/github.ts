@@ -62,8 +62,8 @@ export async function getGithubStats(user: string): Promise<GithubStats> {
   return {
     total: contrib?.total.lastYear ?? 0,
     days: contrib?.contributions ?? [],
-    repos: profile?.public_repos ?? null,
-    followers: profile?.followers ?? null,
+    // repos: profile?.public_repos ?? null,
+    // followers: profile?.followers ?? null,
     prs: prSummary,
   };
 }

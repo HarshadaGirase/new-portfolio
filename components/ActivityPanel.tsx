@@ -146,18 +146,18 @@ export default function ActivityPanel({ stats, user }: { stats: GithubStats; use
                   ))}
                 </div>
               )}
-              {stats.repos !== null && (
+              {/* {stats.repos !== null && (
                 <div>
                   <dt className="inline">Public repos </dt>
                   <dd className="inline font-semibold text-ink">{stats.repos}</dd>
                 </div>
-              )}
-              {stats.followers !== null && (
+              )} */}
+              {/* {stats.followers !== null && (
                 <div>
                   <dt className="inline">Followers </dt>
                   <dd className="inline font-semibold text-ink">{stats.followers}</dd>
                 </div>
-              )}
+              )} */}
             </dl>
 
             {weeks.length > 0 ? (
